@@ -1,0 +1,42 @@
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+    }
+
+    h1 {
+      color: aquamarine;
+    }
+
+
+    /* Tablets */
+    @media (min-width: 30rem)
+    {
+
+    }
+
+    /* Laptops */
+    @media (min-width: 48rem)
+    {
+        
+    }
+
+    /* Desktop */
+    @media (min-width: 64rem)
+    {
+
+    }
+
+    /* TV */
+    @media (min-width: 75rem)
+    {
+        
+    }
+
+
+
