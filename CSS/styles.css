@@ -26,6 +26,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--headline-color);
 }
 
+
 /* GRID layout */
 
 .layout {
@@ -38,8 +39,8 @@ h1, h2, h3, h4, h5, h6 {
   grid-template-areas: 
   "navigation-bar" 
   "search-bar" 
-  "movie-list" 
-  "movie-card";
+  "search-result" 
+  "movie-info";
   overflow: visible;  
 }
 
@@ -54,26 +55,60 @@ h1, h2, h3, h4, h5, h6 {
   grid-area: search-bar;
 }
 
+.search-result {
+  grid-area: search-result;
+  margin-top: 1rem;
+}
+
 .movie-list {
   grid-area: movie-list;
 }
 
-.movie-card {
-  grid-area: movie-card;
+.movie-info {
+  grid-area: movie-info;
 }
 
 .navbar {
   padding: 0.5rem 1rem;
 }
 
+.movie-list {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-gap: 1rem; 
+  overflow: visible;
+}
 
+.movie-card:hover {
+  border: 5px solid;
+  border-color:forestgreen; 
+  padding: 0.5rem;
+}
 
+.card-title {
+  margin-bottom: 0;
+  font-size: 0.7rem;
+}
 
+.card-img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
 /* Tablets */
 
 @media (min-width: 37rem) {
   body {
     margin: 1rem 3rem 1rem 3rem;
+  }
+
+  .movie-list {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -83,6 +118,10 @@ h1, h2, h3, h4, h5, h6 {
   body {
     margin: 2rem 4rem 2rem 4rem;
   }
+
+  .movie-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 /* Desktop */
@@ -90,6 +129,10 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 64rem) {
   body {
     margin: 2rem 15rem 2rem 15rem;
+  }
+
+  .movie-list {
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 
@@ -99,4 +142,9 @@ h1, h2, h3, h4, h5, h6 {
   body {
     margin: 2rem 25rem 2rem 25rem;
   }
+
+  .movie-list {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
 }

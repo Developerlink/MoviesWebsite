@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="CSS/styles.css">
     <link rel="icon" href="favicon.ico">
     <script src="https://kit.fontawesome.com/a07bab9252.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -56,37 +57,78 @@
 
 
         <div class="search-bar">
-            <form class="row g-2" action="/" method="GET">
-                <h1>Welcome to MyMovies</h1>
+            <form id="my-form" class="row g-2" action="#" method="GET">
+                <h1 id="main-header">Welcome to MyMovies</h1>
                 <p>Search for a movie and add it to your favorite movies list</p>
                 <div class="col-auto">
                     <input class="form-control" type="text" id="search-input" name="search-query" placeholder="Search">
                 </div>
                 <div class="col-auto">
-                    <button class="btn btn-dark" type="submit" >Search</button>
+                    <button id="search-button" class="btn btn-dark" type="button">Search</button>
                 </div>
             </form>
-        </div>        
-    </div>
-    
-    <button class="btn btn-primary" type="button" onclick="SayHello(3)">Test</button>
-
-    <div class="movie-list">
-        <h1>Movie List</h1>
-        <div>   </div>
+        </div>
     </div>
 
-    https://stackoverflow.com/questions/54706080/generating-dynamic-html-cards-from-a-javascript-array
-    
-    
+    <div class="search-result">
+        <div class="movie-list">
+            <div class="movie-card">
+                <p class="card-title">Back to the future (1985)</p>
+                <img class="card-img" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ayoiQozcSUtM64nFgXpyjaixvge.jpg" alt="movie-poster">
+            </div>
+            <div class="movie-card">
+                <p class="card-title">Back to the future (1985)</p>
+                <img class="card-img" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ayoiQozcSUtM64nFgXpyjaixvge.jpg" alt="movie-poster">
+            </div>
+            <div class="movie-card">
+                <p class="card-title">Back to the future (1985)</p>
+                <img class="card-img" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ayoiQozcSUtM64nFgXpyjaixvge.jpg" alt="movie-poster">
+            </div>
+            <div class="movie-card">
+                <p class="card-title">Back to the future (1985)</p>
+                <img class="card-img" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ayoiQozcSUtM64nFgXpyjaixvge.jpg" alt="movie-poster">
+            </div>
+            <div class="movie-card">
+                <p class="card-title">Back to the future (1985)</p>
+                <img class="card-img" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ayoiQozcSUtM64nFgXpyjaixvge.jpg" alt="movie-poster">
+            </div>
+            <div class="movie-card">
+                <p class="card-title">Back to the future (1985)</p>
+                <img class="card-img" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ayoiQozcSUtM64nFgXpyjaixvge.jpg" alt="movie-poster">
+            </div>
+            <div class="movie-card">
+                <p class="card-title">Back to the future (1985)</p>
+                <img class="card-img" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ayoiQozcSUtM64nFgXpyjaixvge.jpg" alt="movie-poster">
+            </div>
+            <div class="movie-card">
+                <p class="card-title">Back to the future (1985)</p>
+                <img class="card-img" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ayoiQozcSUtM64nFgXpyjaixvge.jpg" alt="movie-poster">
+            </div>
+            <div class="movie-card">
+                <p class="card-title">Back to the future (1985)</p>
+                <img class="card-img" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ayoiQozcSUtM64nFgXpyjaixvge.jpg" alt="movie-poster">
+            </div>
+            <div class="movie-card">
+                <p class="card-title">Back to the future (1985)</p>
+                <img class="card-img" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ayoiQozcSUtM64nFgXpyjaixvge.jpg" alt="movie-poster">
+            </div>
+            <div class="movie-card">
+                <p class="card-title">Back to the future (1985)</p>
+                <img class="card-img" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ayoiQozcSUtM64nFgXpyjaixvge.jpg" alt="movie-poster">
+            </div>
+        </div>
+    </div>
+
+
+
     <!-- some kind of listing control -->
     <!-- layout for every list item + button to add -->
-    
+
     <!-- show list of added movies on different page -->
-    
-    
+
+
     <script src="JS/home.js" charset="utf-8"></script>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
         crossorigin="anonymous"></script>
