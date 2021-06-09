@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyMovies</title>
+    <title>Movie Details</title>
     <!-- Bootstrap must be placed BEFORE any other stylesheets -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -14,9 +14,8 @@
     <script src="https://kit.fontawesome.com/a07bab9252.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-
 <body>
-    <div class="layout">
+    <div class="info-layout">
         <div class="navigation-bar">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid">
@@ -29,7 +28,7 @@
                     <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
                         <div class="p-2 bd-highlight">
                             <ul class="navbar-nav">
-                                <li><a class="nav-link" href="/info.html?id=25">Javascript Examples</a></li>
+                                <li><a class="nav-link" href="/info.html">Javascript Examples</a></li>
                             </ul>
                         </div>
                         <div class="ms-auto p-2 bd-highlight">
@@ -55,27 +54,11 @@
         </div>
 
 
-        <div class="search-bar">
-            <form id="my-form" class="row g-2" action="#" method="GET">
-                <h1 id="main-header">Welcome to MyMovies</h1>
-                <p>Search for a movie and add it to your favorite movies list</p>
-                <div class="col-auto">
-                    <input class="form-control" type="text" id="search-input" name="search-query" placeholder="Search">
-                </div>
-                <div class="col-auto">
-                    <button id="search-button" class="btn btn-dark" type="button">Search</button>
-                </div>
-            </form>
+        <div class="info-panel">
+            
         </div>
-    </div>
 
-    <div class="search-result">
-        <div class="movie-list">
-        </div>
-    </div>
-
-    <div class="favorites-result">
-        <div class="favorites-list">
+        <div class="movie-poster">
 
         </div>
     </div>
@@ -83,10 +66,9 @@
 
 
 
-    <!-- show list of added movies on different page -->
 
 
-    <script src="JS/home.js" charset="utf-8"></script>
+    <script src="JS/info.js" charset="utf-8"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
