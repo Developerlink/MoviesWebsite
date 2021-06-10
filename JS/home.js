@@ -36,7 +36,7 @@ $(document).ready(function () {
 
 function handleJson(jsonData) {
     //console.log(movieList);
-    movieList = JSON.parse(JSON.stringify(jsonData)).results;
+    movieList = jsonData.results;
     //console.log(movieList);
 
     // Empty results first.
@@ -44,7 +44,7 @@ function handleJson(jsonData) {
 
     // Add result header.
     //$(".result-header").remove();
-    if (movieList.length > 0){
+    if (movieList.length > 0) {
         var resultHeader = document.createElement('h2');
         resultHeader.innerHTML = "Search result:";
         resultHeader.className = "result-header";
@@ -54,6 +54,11 @@ function handleJson(jsonData) {
     if (movieList.length != 0) {
 
         var stop = movieList.length;
+
+        // for (i = 0; i <= stop; i++) {
+        //     var card = createCard(movieList[i]);
+        //     document.querySelector(".movie-list").appendChild(card);
+        // }
 
         for (i = 0; i <= stop; i++) {
             var card = document.createElement('div');
@@ -75,13 +80,41 @@ function handleJson(jsonData) {
             card.appendChild(img);
             card.onclick = pickMovie();
             //console.log(card.id);
-            if (i == stop - 1) {
-                card.style.visibility = "hidden";
-            }
+            // if (i == stop - 1) {
+            //     card.style.visibility = "hidden";
+            // }
             // Adding movie-card to grid.
             document.querySelector(".movie-list").appendChild(card);
         }
     }
+}
+
+function createCard(movie) {
+    var card = document.createElement('div');
+    card.className = "movie-card";
+    // Movie title.
+    var title = document.createElement('p');
+    title.className = "card-title";
+    if (movie.original_title != null) {
+        title.innerHTML = movie.original_title + " (" + movie.release_date.slice(0, 4) + ")";
+    }
+    // Movie poster.
+    var img = document.createElement("img");
+    img.className = "card-img";
+    img.src = POSTER_PATH + movie.poster_path;
+    img.alt = "movie poster";
+    // Assembling movie-card.
+    card.id = movie.id;
+    card.appendChild(title);
+    card.appendChild(img);
+    card.onclick = pickMovie();
+    //console.log(card.id);
+    // if (i == stop - 1) {
+    //     card.style.visibility = "hidden";
+    // }
+    // Adding movie-card to grid.
+    return card;
+
 }
 
 
@@ -186,7 +219,7 @@ function pickMovie() {
     })
 }
 
-function pickFavoriteMovie(){
+function pickFavoriteMovie() {
     console.log("Not implemented yet!");
 }
 

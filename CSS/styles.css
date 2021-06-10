@@ -117,24 +117,47 @@ a:hover {
   height: 100%;
   overflow: auto;
   display: grid;  
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: 
-  "navigation-bar navigation-bar" 
-  "info-panel movie-poster"; 
+  "navigation-bar" 
+  "info-table"
+  "movie-poster"; 
   overflow: visible;  
 }
 
-.info-panel {
-  grid-area: info-panel;
+.info-table {
+  grid-area: info-table;
 }
 
 .movie-poster {
   grid-area: movie-poster;
+  margin-left: 1rem;
 }
 
 
+.label {
 
+}
+
+.data {
+
+}
+
+table, td {
+  border: 1px solid black;
+  border-collapse: separate;
+  border-spacing: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: whitesmoke;
+  color: black;
+}
+
+td {
+  padding: 1rem;
+  height: 2rem;
+}
 
 
 
@@ -164,6 +187,14 @@ a:hover {
 
   .movie-list, .favorites-list {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .info-layout {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "navigation-bar navigation-bar" 
+    "info-table movie-poster"; 
   }
 }
 
