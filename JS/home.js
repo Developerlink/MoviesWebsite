@@ -220,6 +220,7 @@ function pickMovie() {
 }
 
 function pickFavoriteMovie() {
+    // Replaced by anchor tag!
     console.log("Not implemented yet!");
 }
 

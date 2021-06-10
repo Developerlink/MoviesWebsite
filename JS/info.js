@@ -96,6 +96,7 @@ function handleJson(jsonData) {
 
     var poster = document.createElement("img");
     poster.src = POSTER_PATH + movie.poster_path;
+    poster.className = "poster";
     document.querySelector(".movie-poster").appendChild(poster);
 
 }

@@ -135,13 +135,8 @@ a:hover {
   margin-left: 1rem;
 }
 
-
-.label {
-
-}
-
-.data {
-
+.poster {
+  width: 100%;
 }
 
 table, td {
@@ -160,6 +155,63 @@ td {
 }
 
 
+.animation-layout {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  display: grid;  
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+  "navigation-bar" 
+  "container";
+  overflow: visible;  
+}
+
+#container {
+  grid-area: container;
+  height: 30rem;
+  background-color: aliceblue;
+  position: relative;
+}
+
+#sun {
+  position: absolute;
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+  top: 100px;
+  left: 10px;
+  background: darkorange;
+  box-shadow: 0 0 100px orange,
+                0 0 60px orange,
+                0 0 20px yellow,
+                inset 0 0 80px yellow;
+}
+
+.container {
+  position: relative;
+}
+
+.ocean {
+  grid-area: ocean;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+}
+
+.sun {
+  position: absolute;
+  z-index: 1;
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  background: orange;
+  box-shadow: 0 0 100px orange,
+                0 0 60px orange,
+                0 0 20px yellow,
+                inset 0 0 80px yellow;
+}
 
 
 
@@ -176,6 +228,11 @@ td {
   .movie-list, .favorites-list {
     grid-template-columns: repeat(4, 1fr);
   }
+
+  .sun {
+    height: 4rem;
+    width: 4rem;
+  }
 }
 
 /* Laptops */
@@ -189,12 +246,9 @@ td {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .info-layout {
-    grid-template-columns: 1fr auto;
-    grid-template-rows: 1fr;
-    grid-template-areas: 
-    "navigation-bar navigation-bar" 
-    "info-table movie-poster"; 
+  .sun {
+    height: 4rem;
+    width: 4rem;
   }
 }
 
@@ -207,8 +261,25 @@ td {
 
   .movie-list, .favorites-list {
     grid-template-columns: repeat(6, 1fr);
+  }  
+
+  .info-layout {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "navigation-bar navigation-bar" 
+    "info-table movie-poster"; 
+    height: auto;
+    max-height: 70%;
+  }
+
+  .sun {
+    height: 7rem;
+    width: 7rem;
   }
 }
+
+
 
 /* TV */
 
@@ -219,6 +290,8 @@ td {
 
   .movie-list, .favorites-list {
     grid-template-columns: repeat(6, 1fr);
-  }
+  }  
+
+
 
 }

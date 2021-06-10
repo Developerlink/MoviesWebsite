@@ -14,8 +14,9 @@
     <script src="https://kit.fontawesome.com/a07bab9252.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
+
 <body>
-    <div class="info-layout">
+    <div class="animation-layout">
         <div class="navigation-bar">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid">
@@ -53,4 +54,39 @@
             </nav>
         </div>
 
-    </div> 
+        <div id="container">
+            <img class="ocean" src="ocean.jpg" alt="">
+            <div id="sun"></div>
+        </div>
+
+        <script>
+            var container = document.getElementById('container');
+            var sun = document.getElementById('sun');
+            var sunWidth = sun.offsetWidth;
+            var limit = container.offsetWidth - sunWidth - 10;
+
+            var sunLeft = 10;
+            function animate(e) {
+                //alert(e.keyCode);
+                if (e.keyCode == 39) {
+                    if (sunLeft < limit) {
+                        sunLeft += 10;
+                        sun.style.left = sunLeft + 'px';
+                    }
+                }
+
+                if (e.keyCode == 37) {
+                    if (10 < sunLeft)
+                    {
+                        sunLeft -= 10;
+                        sun.style.left = sunLeft + 'px';
+                    }
+                }
+            }
+
+            document.onkeydown = animate;
+
+        </script>
+
+
+    </div>
