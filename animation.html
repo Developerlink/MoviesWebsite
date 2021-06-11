@@ -54,6 +54,18 @@
             </nav>
         </div>
 
+        <div class="container">
+            <img class="ocean" src="ocean.jpg" alt="">
+            <div class="sun"></div>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                var sun = $(".sun");
+                sun.animate({left: '65%'}, 8000);
+            })
+        </script>
+
         <div id="container">
             <img class="ocean" src="ocean.jpg" alt="">
             <div id="sun"></div>

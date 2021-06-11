@@ -161,18 +161,20 @@ td {
   overflow: auto;
   display: grid;  
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-template-areas: 
   "navigation-bar" 
-  "container";
+  "container"
+  "second-container";
   overflow: visible;  
 }
 
 #container {
-  grid-area: container;
+  grid-area: second-container;
   height: 30rem;
   background-color: aliceblue;
   position: relative;
+  margin-top: 26rem;
 }
 
 #sun {
@@ -191,7 +193,10 @@ td {
 
 .container {
   position: relative;
+  grid-area: container;
 }
+
+
 
 .ocean {
   grid-area: ocean;
@@ -202,6 +207,7 @@ td {
 
 .sun {
   position: absolute;
+  top: 5rem;
   z-index: 1;
   border-radius: 50%;
   height: 2rem;
